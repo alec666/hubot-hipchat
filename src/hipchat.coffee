@@ -220,6 +220,7 @@ class HipChat extends Adapter
       host   : host
       port   : 443
       path   : path += "?auth_token=#{@options.token}"
+      path   : path += "&message_format=html"
       method : method
       headers: headers
 

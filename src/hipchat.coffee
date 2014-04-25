@@ -224,6 +224,8 @@ class HipChat extends Adapter
       method : method
       headers: headers
 
+    @logger.debug "Inspect Request:", method, path, body
+
     if method is "POST"
       headers["Content-Type"] = "application/x-www-form-urlencoded"
       options.headers["Content-Length"] = body.length
